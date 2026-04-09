@@ -9,7 +9,7 @@ export async function POST(req: Request) {
       specialty: body.specialty ?? "",
       city:      body.city      ?? "",
       patients:  body.patients  ?? 0,
-      source:    "calculadora",
+      source:    body.source    ?? "calculadora",
       timestamp: new Date().toISOString(),
     };
 
