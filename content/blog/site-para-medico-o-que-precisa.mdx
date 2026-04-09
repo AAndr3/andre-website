@@ -1,0 +1,165 @@
+export const metadata = {
+  title: "O que precisa um site de médico para funcionar a sério (2026)",
+  description: "Não basta ter um site bonito. Um site de médico que traz pacientes precisa de SEO técnico, copy certo, velocidade, e uma estrutura que o Google consiga ler. Aqui está o checklist completo.",
+  publishedAt: "2026-04-09",
+  readTime: "8 min",
+  category: "Sites",
+};
+
+# O que precisa um site de médico para funcionar a sério (2026)
+
+Existe uma ilusão perigosa no mundo dos sites para profissionais de saúde: a de que basta ter um site.
+
+"Já tenho site" é uma das frases que ouço mais vezes — geralmente dita por alguém que não aparece no Google, não recebe marcações pelo site, e não sabe porquê.
+
+O problema não é ter ou não ter um site. É o que o site tem — ou não tem — dentro.
+
+Este artigo é o checklist completo do que um site de médico precisa para funcionar a sério.
+
+---
+
+## 1. Velocidade (Core Web Vitals)
+
+O Google mede quanto tempo demora o teu site a carregar. Se demorar mais de 3 segundos, duas coisas acontecem:
+
+- **Os pacientes saem.** Mais de 50% das visitas móveis são abandonadas se o site demorar mais de 3 segundos.
+- **O Google penaliza-te.** A velocidade é um factor de ranking directo desde 2021.
+
+<Callout type="info">
+Podes verificar a velocidade do teu site em [PageSpeed Insights](https://pagespeed.web.dev). Um bom score no mobile é acima de 75.
+</Callout>
+
+Os erros mais comuns que tornam sites médicos lentos:
+
+- Imagens não comprimidas (uma foto de 4MB num smartphone mata o site)
+- Temas WordPress pesados com 40+ plugins activos
+- JavaScript que bloqueia o carregamento (common em builders como Wix ou Squarespace)
+- Hosting barato sem CDN
+
+**O que fazer:** Usa imagens em formato WebP com menos de 200KB cada. Escolhe um framework moderno (Next.js, Astro) ou um tema WordPress minimalista. Hospeda num CDN (Vercel, Cloudflare).
+
+---
+
+## 2. Estrutura de URLs e páginas
+
+O Google precisa de perceber o que cada página do teu site é sobre. Isso começa na URL.
+
+❌ Mau: `consultorio.pt/page1` ou `consultorio.pt/?p=23`
+✅ Bom: `consultorio.pt/dermatologista-lisboa` ou `consultorio.pt/consulta-psicologia-porto`
+
+Cada especialidade que tratas merece a sua própria página. Se és psicólogo e tratas ansiedade, depressão, e problemas de casal, cada um desses deve ter uma página separada — com o nome da tua cidade.
+
+<StatsRow>
+  <Stat value="3x" label="mais visibilidade" sub="com páginas por especialidade" />
+  <Stat value="68%" label="das pesquisas" sub="incluem localização" />
+  <Stat value="2s" label="tempo máximo" sub="para carregar no mobile" />
+</StatsRow>
+
+---
+
+## 3. Title tags e meta descriptions
+
+O title tag é o que aparece no resultado do Google — é o título azul clicável. A meta description é o texto abaixo.
+
+Muitos sites médicos têm titles como "Bem-vindo ao meu consultório" ou, pior ainda, o nome do tema WordPress.
+
+**Fórmula para o title tag de uma página de médico:**
+
+```
+[Especialidade] em [Cidade] — [Nome] | [Subtítulo curto]
+```
+
+Exemplo: `Psicólogo Clínico em Lisboa — Dr. João Silva | Ansiedade e Depressão`
+
+A meta description não é um factor de ranking directo, mas influencia o CTR (a percentagem de pessoas que clicam). Escreve como se fosse um anúncio: o que o paciente vai encontrar e porque deve clicar.
+
+---
+
+## 4. Google Business Profile (o mais importante de todos)
+
+O Google Business Profile — aquele perfil que aparece no mapa quando pesquisas "psicólogo perto de mim" — é provavelmente o activo digital mais valioso que um profissional de saúde independente pode ter.
+
+Um perfil bem optimizado aparece no "local pack": os 3 resultados com mapa que aparecem antes de qualquer site orgânico.
+
+<Callout type="warning">
+**Não confundas** o teu site com o teu perfil Google. São duas coisas diferentes. Podes ter um site excelente e não aparecer no mapa — e podes aparecer no mapa mesmo sem site (embora ter os dois é sempre melhor).
+</Callout>
+
+O que o teu Google Business Profile precisa de ter:
+
+- **Categoria principal correcta** (ex: "Psicólogo" não "Terapeuta")
+- **Descrição com keywords** da tua especialidade e cidade
+- **Horário actualizado** (inclui feriados)
+- **Pelo menos 10 avaliações** com resposta tua
+- **Fotos reais** do espaço e da tua cara
+- **Posts semanais** (o Google valoriza perfis activos)
+
+---
+
+## 5. Copy que converte
+
+Um site médico não é um CV. É uma ferramenta de conversão.
+
+O paciente que chega ao teu site tem um problema — dor crónica, ansiedade, dentes a doer — e quer saber se tu és a pessoa certa para o resolver. O teu site tem 8 segundos para convencer que sim.
+
+**O que o copy precisa de responder, pela ordem em que o paciente pensa:**
+
+1. *És o que eu estou à procura?* → Especialidade + cidade claramente no header
+2. *Podes ajudar com o meu problema específico?* → Lista de condições/tratamentos
+3. *Posso confiar em ti?* → Formação, experiência, avaliações reais
+4. *O que acontece a seguir?* → CTA claro: "Marcar consulta" com telefone ou formulário
+
+Evita o erro mais comum: escrever em linguagem médica. "Perturbação depressiva major" não é o que o teu paciente pesquisa. "Tristeza que não passa" ou "depressão" é.
+
+---
+
+## 6. Schema markup (dados estruturados)
+
+O schema markup é código que diz ao Google exactamente o que é cada parte do teu site — o nome do médico, a especialidade, a morada, o número de telefone, as avaliações.
+
+Com schema bem configurado, o teu resultado no Google pode aparecer com estrelas de avaliação, horário e telefone directamente na pesquisa — sem o utilizador precisar de clicar.
+
+Os schemas mais importantes para médicos:
+
+- **Physician** ou **MedicalBusiness** — identifica o profissional/clínica
+- **MedicalSpecialty** — indica a especialidade
+- **LocalBusiness** — morada, telefone, horário
+- **Review / AggregateRating** — avaliações visíveis no Google
+
+---
+
+## 7. Mobile-first (não é opcional)
+
+Mais de 70% das pesquisas de médicos são feitas no telemóvel. Se o teu site não funciona bem no mobile, estás a perder a maioria dos teus potenciais pacientes.
+
+"Funcionar bem no mobile" não é só "caber no ecrã". É:
+
+- Botão de telefone clicável (tel: link) logo no topo
+- Formulário que funciona com o teclado do telemóvel
+- Texto legível sem zoom
+- Não há elementos que se sobrepõem
+- Velocidade aceitável em 4G (não só WiFi)
+
+---
+
+## Resumo: o checklist
+
+| Elemento | Prioridade |
+|---|---|
+| Google Business Profile optimizado | 🔴 Crítico |
+| Velocidade mobile > 75 PageSpeed | 🔴 Crítico |
+| Title tags com especialidade + cidade | 🔴 Crítico |
+| Copy orientado para o paciente | 🟠 Alta |
+| Páginas separadas por especialidade | 🟠 Alta |
+| Schema markup (LocalBusiness + Physician) | 🟠 Alta |
+| Meta descriptions apelativas | 🟡 Média |
+| Posts regulares no Google Business | 🟡 Média |
+| Blog com artigos relevantes | 🟡 Média |
+
+---
+
+Se olhares para este checklist e perceberes que o teu site não tem metade disto — não é culpa tua. A maioria dos sites criados por agências genéricas ou por freelancers sem experiência em saúde simplesmente não foi pensado para isto.
+
+Se quiseres que eu veja o teu site e te diga exactamente o que está a falhar — é gratuito, sem compromisso, 15 minutos.
+
+<CTA />

@@ -707,4 +707,152 @@ export const pages: LPPage[] = [
     ],
     testimonial: T_ANA,
   },
+
+  {
+    slug: "site-para-medico-lisboa",
+    bucket: "easy",
+    keyword: "site para médico Lisboa",
+    meta: {
+      title: "Site para Médico em Lisboa — SEO Local + Google Maps | André Antunes",
+      description: "Crio sites profissionais para médicos e psicólogos em Lisboa. SEO local configurado para aparecer nas pesquisas da cidade. Entrega em 10 dias, garantia 60 dias.",
+    },
+    hero: {
+      badge: "Especializado em Lisboa",
+      headline: ["Site para médico", "em Lisboa —", "aparecer no Google da cidade."],
+      sub: "Lisboa é o mercado mais competitivo de Portugal. Para aparecer nas pesquisas locais, o teu site tem de ser construído especificamente para isso. Faço-o em 10 dias.",
+    },
+    problem: {
+      intro: "Em Lisboa, um psicólogo ou médico independente compete com dezenas de colegas, clínicas privadas e directórios. Aparecer no Google requer mais do que um site genérico.",
+      points: [
+        { icon: "🏙️", title: "Mercado mais competitivo de Portugal", body: "Lisboa tem a maior densidade de profissionais de saúde e a maior procura. Para aparecer no local pack é preciso um perfil Google Business optimizado e um site com SEO local específico." },
+        { icon: "📍", title: "Keywords por zona da cidade", body: "'Psicólogo Lisboa' não é o mesmo que 'psicólogo Cascais' ou 'psicólogo Benfica'. Optimizamos para a tua zona específica — Chiado, Avenidas Novas, Almada — onde os teus pacientes pesquisam." },
+        { icon: "⭐", title: "Avaliações que constroem reputação", body: "Em Lisboa, os pacientes lêem mais avaliações antes de escolher. Um perfil Google com 30+ avaliações bem geridas é a diferença entre aparecer e converter." },
+      ],
+    },
+    stats: [
+      { value: "2.500+", label: "pesquisas/mês", sub: "por médico ou psicólogo em Lisboa" },
+      { value: "3 sem.", label: "para top 3 Google Maps", sub: "média em Lisboa com perfil optimizado" },
+      { value: "10 dias", label: "entrega do site", sub: "com SEO local de Lisboa configurado" },
+    ],
+    svgType: "maps",
+    copyFeature: "Copy com referências locais de Lisboa que geram confiança geográfica",
+    faq: [
+      { q: "Posso aparecer no Google para a minha freguesia específica?", a: "Sim. Optimizamos para o bairro ou zona onde tens consultório — Alvalade, Chiado, Campo de Ourique, etc. — além das pesquisas gerais de Lisboa." },
+      { q: "Lisboa é muito competitiva. Consegues mesmo posicionar?", a: "Sim, mas leva um pouco mais de tempo que em cidades menores. A garantia continua a ser 60 dias — o que é conservador para a maioria dos casos em Lisboa." },
+      { q: "Trabalhas com médicos no Hospital da Luz, CUF, ou consultório próprio?", a: "Foco em médicos com consultório independente. Se estás numa clínica mas também tens consultas privadas, posso criar presença para a componente independente." },
+      { q: "Posso aparecer para pesquisas em inglês (expats em Lisboa)?", a: "Sim. Para especialidades com muitos expats (pediatras, clínicos gerais), criamos conteúdo bilíngue que aparece também em pesquisas em inglês." },
+    ],
+    testimonial: T_MARIANA,
+  },
+
+  {
+    slug: "site-para-medico-porto",
+    bucket: "easy",
+    keyword: "site para médico Porto",
+    meta: {
+      title: "Site para Médico no Porto — SEO Local + Google Maps | André Antunes",
+      description: "Sites profissionais para médicos e psicólogos no Porto. SEO optimizado para o mercado portuense. Entrega em 10 dias, garantia de 60 dias ou devolução total.",
+    },
+    hero: {
+      badge: "Especializado no Porto",
+      headline: ["Site para médico", "no Porto —", "pacientes que pesquisam, a encontrar-te."],
+      sub: "O Porto tem crescimento rápido em saúde privada. Os pacientes pesquisam no Google antes de marcar. Se não apareços nas primeiras posições, a consulta vai para outro.",
+    },
+    problem: {
+      intro: "O Porto e a região metropolitana — Gaia, Matosinhos, Maia — têm uma procura crescente por saúde privada. Mas a maioria dos profissionais independentes ainda não tem presença digital adequada.",
+      points: [
+        { icon: "🌉", title: "Grande Porto = mais pesquisas, mais oportunidade", body: "Porto, Gaia, Matosinhos e Maia têm mercados distintos. Um site optimizado para o Porto não é automaticamente optimizado para Gaia — e vice-versa. Fazemos os dois." },
+        { icon: "📈", title: "Crescimento em saúde privada no Norte", body: "O Norte de Portugal tem visto crescimento consistente em saúde privada. Os profissionais que criam presença agora captam quota de mercado antes que a competição aumente." },
+        { icon: "🔍", title: "Keywords específicas do Porto", body: "Os portuenses pesquisam de forma diferente dos lisboetas. 'Médico de família particular Porto' tem volume diferente de 'clínico geral Porto'. Optimizamos para o que realmente é pesquisado." },
+      ],
+    },
+    stats: [
+      { value: "1.600+", label: "pesquisas/mês", sub: "por médico ou psicólogo no Porto" },
+      { value: "2–3 sem.", label: "para aparecer no Google Maps", sub: "média no Porto com perfil optimizado" },
+      { value: "100%", label: "garantia de resultado", sub: "em 60 dias ou devolução total" },
+    ],
+    svgType: "maps",
+    copyFeature: "Copy com especificidade geográfica do Porto e área metropolitana",
+    faq: [
+      { q: "Podes optimizar para Porto, Gaia, e Matosinhos ao mesmo tempo?", a: "Sim. Criamos páginas de localização separadas para cada zona — cada uma com o seu SEO local próprio." },
+      { q: "Como funciona para médicos que se deslocam entre consultórios?", a: "Configuramos cada localização no Google Business Profile e criamos páginas de localização no site para cada morada." },
+      { q: "O Porto é menos competitivo que Lisboa?", a: "Em geral, sim — o que significa resultados mais rápidos. A maioria dos clientes no Porto começa a ver resultados em 2–4 semanas." },
+      { q: "Tenho clínica em Matosinhos mas quero aparecer em pesquisas do Porto. É possível?", a: "Sim. Optimizamos para a área geográfica real dos teus pacientes, não apenas para a morada exacta do consultório." },
+    ],
+    testimonial: T_RUI,
+  },
+
+  {
+    slug: "site-para-psicologo-lisboa",
+    bucket: "easy",
+    keyword: "site para psicólogo Lisboa",
+    meta: {
+      title: "Site para Psicólogo em Lisboa — Aparecer no Google, Ter Mais Pacientes | André Antunes",
+      description: "Sites profissionais para psicólogos em Lisboa com SEO local e Google Maps. Apareça quando alguém pesquisa 'psicólogo Lisboa'. Entrega em 10 dias, garantia 60 dias.",
+    },
+    hero: {
+      badge: "Para Psicólogos em Lisboa",
+      headline: ["Site para psicólogo", "em Lisboa —", "aparecer quando os pacientes pesquisam."],
+      sub: "Em Lisboa, mais de 1.800 pessoas pesquisam psicólogo por mês. A maioria marca com quem aparece primeiro. O teu site tem de estar lá — com o copy certo e o SEO certo.",
+    },
+    problem: {
+      intro: "A procura por psicólogos em Lisboa está a crescer consistentemente. Mas a maioria dos psicólogos independentes não tem presença digital que converta essa procura em consultas.",
+      points: [
+        { icon: "🧠", title: "Procura alta, visibilidade baixa", body: "Lisboa tem das maiores taxas de procura por psicólogos em Portugal. Mas grande parte dessa procura vai para directórios ou para os poucos psicólogos com site bem optimizado." },
+        { icon: "🎯", title: "Sub-especialidades têm as suas keywords", body: "Psicólogo de casal, psicólogo de ansiedade, psicólogo infantil Lisboa — cada um tem procura separada. Um site bem estruturado captura todas essas variações." },
+        { icon: "🤝", title: "Confiança antes do primeiro contacto", body: "O paciente decide se vai contactar com base no que vê no site — antes de falar contigo. O copy tem de criar confiança sem prometer resultados que não podes garantir." },
+      ],
+    },
+    stats: [
+      { value: "1.800+", label: "pesquisas/mês", sub: "por psicólogo em Lisboa" },
+      { value: "4x", label: "crescimento de procura", sub: "em psicologia desde 2020 em PT" },
+      { value: "60 dias", label: "garantia de resultado", sub: "ou devolução total sem condições" },
+    ],
+    svgType: "google",
+    copyFeature: "Copy ético para saúde mental em linguagem de paciente",
+    faq: [
+      { q: "Podes criar páginas para diferentes abordagens terapêuticas (TCC, EMDR, etc.)?", a: "Sim. Cada abordagem que utilizas pode ter uma página própria, optimizada para as pesquisas específicas dessa abordagem em Lisboa." },
+      { q: "O site respeita as normas deontológicas da Ordem dos Psicólogos?", a: "Sim, sempre. Não utilizo linguagem de 'cura', não faço promessas terapêuticas específicas, e respeito todas as normas da OPP na comunicação." },
+      { q: "Posso ter consultas presenciais e online no mesmo site?", a: "Sim. Muitos psicólogos hoje têm os dois formatos. Optimizamos para ambos — 'psicólogo online' tem um volume de pesquisa significativo em Portugal." },
+      { q: "Funciona para psicólogos a começar (sem muitas avaliações ainda)?", a: "Sim. Construímos a presença desde o início — um perfil verificado, um site profissional, e uma estratégia para recolher as primeiras avaliações organicamente." },
+    ],
+    testimonial: T_MARIANA,
+  },
+
+  {
+    slug: "site-para-fisioterapeuta-portugal",
+    bucket: "easy",
+    keyword: "site para fisioterapeuta portugal",
+    meta: {
+      title: "Site para Fisioterapeuta em Portugal — Google Maps + SEO Local | André Antunes",
+      description: "Sites profissionais para fisioterapeutas em Portugal. SEO para aparecer em pesquisas de fisioterapia na tua cidade. Entrega em 10 dias, garantia 60 dias ou devolução.",
+    },
+    hero: {
+      badge: "Para Fisioterapeutas Independentes",
+      headline: ["Site para", "fisioterapeuta —", "para quem pesquisa, encontrar-te primeiro."],
+      sub: "A fisioterapia é uma das especialidades com maior volume de pesquisa local em Portugal. Aparecer no Google Maps para a tua cidade é a forma mais eficaz de trazer pacientes novos.",
+    },
+    problem: {
+      intro: "A fisioterapia tem uma característica especial: os pacientes têm dor e querem marcar rapidamente. Quem aparece primeiro no Google — mapa e site — tem uma vantagem enorme.",
+      points: [
+        { icon: "⚡", title: "Urgência de marcação imediata", body: "Alguém com uma lesão ou dor crónica não compara 10 opções. Liga para os primeiros 2 ou 3 resultados que aparecem no Google Maps. Se não estás lá, não existes." },
+        { icon: "🎽", title: "Especialidades dentro da fisioterapia", body: "Fisioterapia desportiva, neurológica, pós-operatória, pélvica — cada sub-especialidade tem procura própria. Um site estruturado captura todas essas variações." },
+        { icon: "🏃", title: "Concorrência crescente", body: "O número de fisioterapeutas a abrir prática independente em Portugal está a crescer. Os que criam presença digital agora estabelecem posição antes que a competição aumente." },
+      ],
+    },
+    stats: [
+      { value: "20", label: "pesquisas em média", sub: "por cidade média em Portugal/mês" },
+      { value: "28%", label: "taxa de clique", sub: "para o #1 resultado no Google" },
+      { value: "10 dias", label: "entrega do site", sub: "com Google Maps activo incluído" },
+    ],
+    svgType: "patients",
+    copyFeature: "Copy focado em alívio de dor — a motivação principal do paciente de fisioterapia",
+    faq: [
+      { q: "Posso ter páginas separadas para fisioterapia desportiva e clínica?", a: "Sim, e recomendo. Cada tipo de fisioterapia tem keywords próprias. Páginas separadas rankeiam melhor e convertem melhor." },
+      { q: "Trabalhas com fisioterapeutas em clínica partilhada (sem espaço próprio)?", a: "Sim. Configuramos o Google Business Profile para a morada da clínica e o site com a tua identidade profissional própria." },
+      { q: "Posso mostrar casos de sucesso (com autorização dos pacientes)?", a: "Sim. Testemunhos e casos de sucesso são muito eficazes em fisioterapia. Criamos uma secção para isso com as boas práticas de consentimento." },
+      { q: "Vale a pena ter site se já estou no Doctoralia?", a: "Sim, significativamente. O Doctoralia dá-te visibilidade na plataforma deles. O teu próprio site dá-te visibilidade no Google directamente — onde estão a maioria das pesquisas." },
+    ],
+    testimonial: T_ANA,
+  },
 ];

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
 const CALENDLY_URL = "https://calendly.com/andre-andreantunes/chamada-com-andre";
@@ -9,6 +10,7 @@ const ease = [0.16, 1, 0.3, 1] as [number, number, number, number];
 type Phase = "form" | "calendly";
 
 export default function ContactSection() {
+  const router = useRouter();
   const [phase,      setPhase]      = useState<Phase>("form");
   const [formData,   setFormData]   = useState({ name: "", phone: "", email: "" });
   const [submitting, setSubmitting] = useState(false);
@@ -39,6 +41,11 @@ export default function ContactSection() {
       headers: { "Content-Type": "application/json" },
       body:    JSON.stringify({ ...formData, source: "homepage" }),
     }).catch(() => {});
+
+    // GA4 conversion event
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "lead_submitted", { event_category: "conversion", event_label: "contact_form" });
+    }
 
     setTimeout(() => {
       setSubmitting(false);

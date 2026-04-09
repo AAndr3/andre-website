@@ -219,6 +219,11 @@ export default function Calculadora() {
         body:    JSON.stringify(payload),
       }).catch(() => {}); // silent fail — never block the UX
 
+      // GA4 conversion event
+      if (typeof window !== "undefined" && (window as any).gtag) {
+        (window as any).gtag("event", "lead_submitted", { event_category: "conversion", event_label: "calculadora" });
+      }
+
       setCapture("calendly");
       setTimeout(() => calRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 80);
     }

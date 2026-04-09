@@ -85,6 +85,27 @@ export function Checklist({ title, children }: { title?: string; children: React
   );
 }
 
+export function CTA() {
+  return (
+    <div className="my-10 p-8 rounded-2xl border border-emerald-400/15 bg-emerald-400/4 text-center">
+      <p className="text-xs font-semibold text-emerald-400/70 uppercase tracking-widest mb-3">Pronto para crescer?</p>
+      <h3 className="text-xl font-bold text-zinc-50 mb-2 tracking-tight">Queres que eu trate disto por ti?</h3>
+      <p className="text-sm text-zinc-400 leading-relaxed mb-5">
+        Construo a tua presença online em 10 dias — site profissional, SEO configurado, Google Maps activo. Com garantia de 60 dias ou devolução total.
+      </p>
+      <a
+        href="/contacto"
+        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-400 text-zinc-950 font-semibold text-sm hover:bg-emerald-300 transition-colors duration-200"
+      >
+        Marca uma conversa de 15 min
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  );
+}
+
 // ─── MDX component mapping (typography + custom) ─────────────────────────────
 
 const components: MDXComponents = {
@@ -183,6 +204,7 @@ const components: MDXComponents = {
   KeyQuote,
   CheckItem,
   Checklist,
+  CTA,
 };
 
 export function useMDXComponents(): MDXComponents {
