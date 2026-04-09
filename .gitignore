@@ -36,6 +36,14 @@ yarn-error.log*
 # vercel
 .vercel
 
+# claude
+.claude/
+
+# loose files
+*.PNG
+*.png
+!public/*.png
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
