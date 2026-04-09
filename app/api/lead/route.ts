@@ -17,11 +17,14 @@ export async function POST(req: Request) {
     // Set LEAD_WEBHOOK_URL in your .env.local to forward leads anywhere.
     const webhookUrl = process.env.LEAD_WEBHOOK_URL;
     if (webhookUrl) {
-      await fetch(webhookUrl, {
+      const res = await fetch(webhookUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(lead),
       });
+      console.log("[WEBHOOK]", res.status, res.statusText);
+    } else {
+      console.warn("[WEBHOOK] LEAD_WEBHOOK_URL not set");
     }
 
     // ── Fallback log (visible in Vercel Function logs) ─────────────────
