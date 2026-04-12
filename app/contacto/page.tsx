@@ -14,7 +14,7 @@ export default function ContactoPage() {
     <>
       <Nav />
       <main className="min-h-[100dvh] pt-24">
-        <ContactSection />
+        <ContactSection source="contacto" />
       </main>
       <Footer />
     </>

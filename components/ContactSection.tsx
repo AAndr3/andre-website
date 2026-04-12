@@ -9,7 +9,7 @@ const ease = [0.16, 1, 0.3, 1] as [number, number, number, number];
 
 type Phase = "form" | "calendly";
 
-export default function ContactSection() {
+export default function ContactSection({ source = "homepage" }: { source?: string }) {
   const router = useRouter();
   const [phase,      setPhase]      = useState<Phase>("form");
   const [formData,   setFormData]   = useState({ name: "", phone: "", email: "" });
@@ -39,7 +39,7 @@ export default function ContactSection() {
     fetch("/api/lead", {
       method:  "POST",
       headers: { "Content-Type": "application/json" },
-      body:    JSON.stringify({ ...formData, source: "homepage" }),
+      body:    JSON.stringify({ ...formData, source }),
     }).catch(() => {});
 
     // GA4 conversion event
