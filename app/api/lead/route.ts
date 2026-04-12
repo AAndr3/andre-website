@@ -39,6 +39,25 @@ export async function POST(req: Request) {
       console.log("[WEBHOOK]", res.status, res.statusText);
     }
 
+    // ── Dashboard webhook ───────────────────────────────────────────────
+    try {
+      const dashRes = await fetch("https://dashboard.andreantunes.co/api/webhook/lead", {
+        method:  "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name:      lead.name,
+          phone:     lead.phone,
+          email:     lead.email,
+          specialty: lead.specialty,
+          city:      lead.city,
+          source:    lead.source,
+        }),
+      });
+      console.log("[DASHBOARD WEBHOOK]", dashRes.status, dashRes.statusText);
+    } catch (err) {
+      console.error("[DASHBOARD WEBHOOK ERROR]", err);
+    }
+
     console.log("[LEAD]", JSON.stringify(lead));
     return Response.json({ ok: true });
   } catch (err) {
