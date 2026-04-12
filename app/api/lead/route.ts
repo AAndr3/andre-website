@@ -50,6 +50,7 @@ export async function POST(req: Request) {
           email:     lead.email,
           specialty: lead.specialty,
           city:      lead.city,
+          patients:  lead.patients,
           source:    lead.source,
         }),
       });
