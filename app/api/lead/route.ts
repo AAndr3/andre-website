@@ -5,13 +5,15 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     const lead = {
-      name:      body.name      ?? "",
-      phone:     body.phone     ?? "",
-      email:     body.email     ?? "",
-      specialty: body.specialty ?? "",
-      city:      body.city      ?? "",
-      patients:  body.patients  ?? 0,
-      source:    body.source    ?? "homepage",
+      name:        body.name      ?? "",
+      phone:       body.phone     ?? "",
+      email:       body.email     ?? "",
+      specialty:   body.specialty ?? "",
+      city:        body.city      ?? "",
+      patients:    body.patients  ?? 0,
+      source:      body.source    ?? "homepage",
+      status:      "novo",
+      assigned_to: "André",
     };
 
     // ── Supabase ───────────────────────────────────────────────────────
