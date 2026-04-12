@@ -212,6 +212,7 @@ export default function Calculadora() {
         specialty: sel?.label ?? "",
         city:      cit?.label ?? "",
         patients,
+        source:    "calculadora",
       };
       fetch("/api/lead", {
         method:  "POST",
