@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
 import AgendarClient from "./AgendarClient";
 
 export const metadata: Metadata = {
@@ -11,12 +9,8 @@ export const metadata: Metadata = {
 
 export default function AgendarPage() {
   return (
-    <>
-      <Nav />
-      <main className="min-h-[100dvh] pt-20 pb-24">
-        <AgendarClient />
-      </main>
-      <Footer />
-    </>
+    <main className="min-h-[100dvh]">
+      <AgendarClient />
+    </main>
   );
 }
