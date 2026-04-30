@@ -1,6 +1,45 @@
+import crypto from "crypto";
+
+function hash(value: string) {
+  return crypto.createHash("sha256").update(value.trim().toLowerCase()).digest("hex");
+}
+
+async function sendMetaCAPI(eventName: string, lead: {
+  email: string; phone: string; name: string; source: string;
+}, requestIp?: string) {
+  const pixelId = process.env.META_PIXEL_ID;
+  const token   = process.env.META_CAPI_TOKEN;
+  if (!pixelId || !token) return;
+
+  const userData: Record<string, string> = {
+    client_user_agent: "Mozilla/5.0",
+  };
+  if (lead.email) userData["em"] = hash(lead.email);
+  if (lead.phone) userData["ph"] = hash(lead.phone.replace(/\s+/g, ""));
+  if (requestIp)  userData["client_ip_address"] = requestIp;
+
+  const payload = {
+    data: [{
+      event_name:       eventName,
+      event_time:       Math.floor(Date.now() / 1000),
+      action_source:    "website",
+      event_source_url: `https://andreantunes.co/${lead.source}`,
+      user_data:        userData,
+    }],
+  };
+
+  try {
+    await fetch(
+      `https://graph.facebook.com/v19.0/${pixelId}/events?access_token=${token}`,
+      { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) }
+    );
+  } catch { /* non-blocking */ }
+}
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();
+    const ip   = req.headers.get("x-forwarded-for")?.split(",")[0] ?? undefined;
 
     const lead = {
       name:      body.name      ?? "",
@@ -10,9 +49,10 @@ export async function POST(req: Request) {
       city:      body.city      ?? "",
       patients:  body.patients  ?? 0,
       source:    body.source    ?? "homepage",
+      notes:     body.notes     ?? "",
     };
 
-    // ── Dashboard webhook (Supabase + notificações) ────────────────────
+    // ── Dashboard webhook ──────────────────────────────────────────────
     const dashRes = await fetch("https://dashboard.andreantunes.co/api/webhook/lead", {
       method:  "POST",
       headers: { "Content-Type": "application/json" },
@@ -30,6 +70,10 @@ export async function POST(req: Request) {
         body:    JSON.stringify(lead),
       }).catch(() => {});
     }
+
+    // ── Meta Conversions API ───────────────────────────────────────────
+    sendMetaCAPI("Lead",    lead, ip);
+    sendMetaCAPI("Contact", lead, ip);
 
     return Response.json({ ok: true });
   } catch (err) {
