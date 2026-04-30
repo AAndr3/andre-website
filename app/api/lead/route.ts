@@ -18,7 +18,7 @@ async function sendMetaCAPI(eventName: string, lead: {
   if (lead.phone) userData["ph"] = hash(lead.phone.replace(/\s+/g, ""));
   if (requestIp)  userData["client_ip_address"] = requestIp;
 
-  const payload = {
+  const payload: Record<string, unknown> = {
     data: [{
       event_name:       eventName,
       event_time:       Math.floor(Date.now() / 1000),
@@ -27,6 +27,9 @@ async function sendMetaCAPI(eventName: string, lead: {
       user_data:        userData,
     }],
   };
+  if (process.env.META_CAPI_TEST_CODE) {
+    payload["test_event_code"] = process.env.META_CAPI_TEST_CODE;
+  }
 
   try {
     const res  = await fetch(
