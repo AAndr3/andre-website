@@ -29,11 +29,13 @@ async function sendMetaCAPI(eventName: string, lead: {
   };
 
   try {
-    await fetch(
+    const res  = await fetch(
       `https://graph.facebook.com/v19.0/${pixelId}/events?access_token=${token}`,
       { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) }
     );
-  } catch { /* non-blocking */ }
+    const json = await res.json().catch(() => ({}));
+    console.log(`[META CAPI] ${eventName}`, res.status, JSON.stringify(json));
+  } catch (e) { console.error(`[META CAPI ERROR] ${eventName}`, e); }
 }
 
 export async function POST(req: Request) {
@@ -72,8 +74,10 @@ export async function POST(req: Request) {
     }
 
     // ── Meta Conversions API ───────────────────────────────────────────
-    sendMetaCAPI("Lead",    lead, ip);
-    sendMetaCAPI("Contact", lead, ip);
+    await Promise.all([
+      sendMetaCAPI("Lead",    lead, ip),
+      sendMetaCAPI("Contact", lead, ip),
+    ]);
 
     return Response.json({ ok: true });
   } catch (err) {
