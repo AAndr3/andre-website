@@ -78,8 +78,9 @@ export async function POST(req: Request) {
 
     // ── Meta Conversions API ───────────────────────────────────────────
     await Promise.all([
-      sendMetaCAPI("Lead",    lead, ip),
-      sendMetaCAPI("Contact", lead, ip),
+      sendMetaCAPI("Lead",     lead, ip),
+      sendMetaCAPI("Contact",  lead, ip),
+      sendMetaCAPI("Schedule", lead, ip),
     ]);
 
     return Response.json({ ok: true });
