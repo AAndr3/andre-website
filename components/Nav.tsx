@@ -7,10 +7,10 @@ import Link from "next/link";
 const ease = [0.16, 1, 0.3, 1] as [number, number, number, number];
 
 const links = [
-  { href: "/#como-funciona", label: "Como funciona" },
-  { href: "/#garantia",      label: "Garantia" },
-  { href: "/calculadora",    label: "Calculadora" },
-  { href: "/blog",           label: "Blog" },
+  { href: "/#como-funciona",      label: "Como funciona" },
+  { href: "/casos-de-sucesso",    label: "Resultados" },
+  { href: "/calculadora",         label: "Calculadora" },
+  { href: "/blog",                label: "Blog" },
 ];
 
 export default function Nav() {
@@ -39,7 +39,7 @@ export default function Nav() {
         className="fixed top-0 left-0 right-0 z-40 flex justify-center pt-6 px-4"
       >
         <div
-          className={`flex items-center justify-between gap-6 px-5 py-3 rounded-full border transition-all duration-500 w-full max-w-[640px] ${
+          className={`flex items-center justify-between gap-4 px-5 py-3 rounded-full border transition-all duration-500 w-full max-w-[820px] ${
             scrolled || open
               ? "bg-zinc-900/95 border-white/10 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
               : "bg-zinc-950/50 border-white/5 backdrop-blur-sm"
@@ -55,7 +55,7 @@ export default function Nav() {
           </Link>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-4">
             {links.map((l) => (
               <a
                 key={l.href}
