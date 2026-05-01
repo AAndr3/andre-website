@@ -73,6 +73,8 @@ function BookingForm({ onScrollTo }: { onScrollTo: () => void }) {
           source:    "agendar",
           specialty: form.pacientes,
           patients:  parseInt(form.pacientes.match(/\d+/)?.[0] ?? "0") || 0,
+          orcamento: form.orcamento,
+          problema:  form.problema,
           notes:     `Orçamento: ${form.orcamento} | Problema: ${form.problema}`,
         }),
       });

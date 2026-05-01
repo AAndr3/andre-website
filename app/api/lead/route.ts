@@ -55,6 +55,8 @@ export async function POST(req: Request) {
       patients:  body.patients  ?? 0,
       source:    body.source    ?? "homepage",
       notes:     body.notes     ?? "",
+      orcamento: body.orcamento ?? "",
+      problema:  body.problema  ?? "",
     };
 
     // ── Dashboard webhook ──────────────────────────────────────────────

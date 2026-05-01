@@ -29,6 +29,8 @@ function BookingModal({ onClose }: { onClose: () => void }) {
           name: form.name, email: form.email, phone: form.phone,
           source: "oferta", specialty: form.pacientes,
           patients: parseInt(form.pacientes.match(/\d+/)?.[0] ?? "0") || 0,
+          orcamento: form.orcamento,
+          problema: form.problema,
           notes: `Orçamento: ${form.orcamento} | Problema: ${form.problema}`,
         }),
       });
