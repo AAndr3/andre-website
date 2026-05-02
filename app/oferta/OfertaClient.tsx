@@ -196,7 +196,7 @@ function BookingModal({ onClose }: { onClose: () => void }) {
               </div>
             </div>
             <iframe
-              src="https://calendly.com/andre-andreantunes/marcaly?hide_event_type_details=1&hide_gdpr_banner=1&background_color=18181b&text_color=f4f4f5&primary_color=34d399"
+              src="https://calendly.com/andre-andreantunes/andre?hide_event_type_details=1&hide_gdpr_banner=1&background_color=18181b&text_color=f4f4f5&primary_color=34d399"
               className="w-full border-0"
               style={{ height: 520 }}
             />
